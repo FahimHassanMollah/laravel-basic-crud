@@ -37,6 +37,15 @@ class TodoController extends Controller
     public function store(Request $request)
     {
         //
+        echo"<pre>";
+        // print_r($request->all());
+         echo"<pre/>";
+         $res= new Todo;
+         $res->name = $request->input('name');
+         $res->save();
+         $request->session()->flash('msg','data inserted');
+         return redirect('/');
+        // dd($request);
     }
 
     /**

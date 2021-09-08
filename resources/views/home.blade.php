@@ -14,6 +14,7 @@
 
     <div class="container pt-5">
         {{-- {{ dd($allTodo) }} --}}
+        <h1 class="text-center text-success">{{ session('msg') }}</h1>
       <div>
             <a class="text-end d-block" href="/create">
             <button class="btn btn-primary">Add Todo</button>
