@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/',[TodoController::class,'show']);
+Route::get('/todo/delete/{id}',[TodoController::class,'destroy']);
+Route::get('/create',[TodoController::class,'create']);

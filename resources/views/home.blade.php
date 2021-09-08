@@ -11,9 +11,15 @@
 </head>
 
 <body>
-    <h1>todo</h1>
-    <div class="container">
+
+    <div class="container pt-5">
         {{-- {{ dd($allTodo) }} --}}
+      <div>
+            <a class="text-end d-block" href="/create">
+            <button class="btn btn-primary">Add Todo</button>
+        </a>
+      </div>
+        <h3 class="text-center text-dark">Todo list</h3>
         <table class="table table-striped">
             <thead>
                 <tr>

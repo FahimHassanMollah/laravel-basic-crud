@@ -25,6 +25,7 @@ class TodoController extends Controller
     public function create()
     {
         //
+        return view('create');
     }
 
     /**
@@ -80,8 +81,11 @@ class TodoController extends Controller
      * @param  \App\Models\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Todo $todo)
+    public function destroy(Todo $todo,$id)
     {
         //
+        Todo::destroy([$id]);
+        return redirect('/');
+        // dd($todo);
     }
 }
