@@ -38,6 +38,7 @@
                     <td>{{ $todo->created_at }}</td>
                     <td>
                         <a href="todo/delete/{{ $todo->id }}">Delete</a>
+                        <a href="todo/edit/{{ $todo->id }}">Edit</a>
                     </td>
                 </tr>
                 @endforeach

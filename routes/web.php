@@ -22,3 +22,5 @@ Route::get('/',[TodoController::class,'show']);
 Route::get('/todo/delete/{id}',[TodoController::class,'destroy']);
 Route::get('/create',[TodoController::class,'create']);
 Route::post('/create/todo',[TodoController::class,'store']);
+Route::get('todo/edit/{id}',[TodoController::class,'edit']);
+Route::post('/update/todo/{id}',[TodoController::class,'update']);

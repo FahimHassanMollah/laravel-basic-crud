@@ -67,9 +67,11 @@ class TodoController extends Controller
      * @param  \App\Models\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function edit(Todo $todo)
+    public function edit(Todo $todo,$id)
     {
         //
+        $todo = Todo::find($id);
+        return view('update',['todo'=>$todo]);
     }
 
     /**
@@ -79,9 +81,16 @@ class TodoController extends Controller
      * @param  \App\Models\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Todo $todo)
+    public function update(Request $request, Todo $todo,$id)
     {
         //
+        // dd($todo);
+          $res= Todo::find($id);
+         $res->name = $request->input('name');
+         $res->save();
+         $request->session()->flash('msg','data inserted');
+         return redirect('/');
+
     }
 
     /**
